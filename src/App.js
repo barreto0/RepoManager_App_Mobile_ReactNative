@@ -1,3 +1,5 @@
+//yarn run react-native run-android
+
 import React, { useState, useEffect } from "react";
 
 import {
@@ -50,7 +52,7 @@ export default function App() {
                 <Text style={styles.repository}>{repo.title}</Text>
               
                 <View style={styles.techsContainer}>
-                  <FlatList
+                  {/* <FlatList
                     data={repo.techs}
                     keyExtractor={ (item, index) => index}
                     renderItem={(item)=>{
@@ -59,11 +61,17 @@ export default function App() {
                         {item}  
                       </Text>
                     }}
-                  />
+                  /> */}
+
+                  {/* <Text style={styles.tech}>
+                      {repo.techs}
+                  </Text>
 
                   <Text style={styles.tech}>
                       {repo.techs}
-                  </Text>
+                  </Text> */}
+
+                  {repo.techs.map(tech => <Text key={tech}style={styles.tech}>{tech}</Text>)}
                   
                 </View>
 
